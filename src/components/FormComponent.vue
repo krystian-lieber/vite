@@ -17,7 +17,9 @@ export interface EvaluationOutput {
 export interface MetricsOutput {
   totalQuestions: number,
   totalIterations: number,
+  totalError: number,
   ftr: number
+  errorRate: number,
 }
 
 const TIMEOUT = 10000;
@@ -191,7 +193,9 @@ export default {
     <div v-if="resultMetrics">
       <div>Total Questions: {{ resultMetrics.totalQuestions }}</div>
       <div>Total Iterations: {{ resultMetrics.totalIterations }}</div>
+      <div>Total Errors: {{ resultMetrics.totalError }}</div>
       <div>FTR: {{ resultMetrics.ftr }}%</div>
+      <div>Error rate: {{ resultMetrics.errorRate }}%</div>
     </div>
 
   </div>
