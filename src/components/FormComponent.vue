@@ -111,7 +111,7 @@ export default {
       const data = (await res.json())[0];
 
 
-      if (data.content.status === 'Pending') {
+      if (data.content.status === 'pending') {
         setTimeout(() => {
           checkForResultEvaluate();
         }, TIMEOUT);
